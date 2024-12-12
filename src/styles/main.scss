@@ -1,0 +1,19 @@
+
+@use 'pages/__page-dir';
+
+@use 'components/__component-dir';
+
+@use 'abstracts/_abstracts-dir';
+
+
+ .appContainer{
+    padding: 16px 64px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer{ 
+    flex: 1;
+    overflow: hidden;
+}

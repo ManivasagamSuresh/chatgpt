@@ -1,0 +1,113 @@
+@use "../abstracts/mixins";
+
+.HomePage_container {
+  @include mixins.flex-container(row, null, center, 100px);
+  height: 100%;
+
+  .HomePage_OrbitalBg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.05;
+    animation: 80s linear infinite rotateOrbital;
+  }
+
+  @keyframes rotateOrbital {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(60deg);
+    }
+  }
+
+  .HomePage_left {
+    flex: 1;
+    @include mixins.flex-container(column, center, center, 16px);
+    text-align: center;
+
+    h1 {
+      font-size: 84px;
+      background: linear-gradient(to right, #217bfe, #e55571);
+      background-clip: text;
+      --webkit-background-clip: text;
+      color: transparent;
+    }
+    h3 {
+      font-weight: 400;
+      max-width: 70%;
+    }
+    a {
+      padding: 14px 24px;
+      background: #217bfe;
+      color: #fff;
+      border-radius: 20px;
+      font-size: 14px;
+
+      margin-top: 20px;
+
+      &:hover {
+        background: #fff;
+        color: #217bfe;
+      }
+    }
+    button {
+    }
+  }
+  .HomePage_right {
+    flex: 1;
+    @include mixins.flex-container(row, center, center, null);
+    height: 100%;
+
+    .Homepage_imgContainer {
+      @include mixins.flex-container(row, center, center, null);
+      background-color: #140e2d;
+      border-radius: 50px;
+      width: 80%;
+      height: 50%;
+      position: relative;
+
+      .Homepage_imgContainer-BgContain{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 50px;
+
+        .Homepage_imgContainer-Bg{
+            background-image: url('/media/bg.png');
+            opacity: 20%;
+            width: 200%;
+            height: 100%;
+            background-size: auto 100%;
+            animation: 8s ease-in-out infinite alternate slidebgAnimate;
+        }
+        @keyframes slidebgAnimate {
+            0% {
+                transform: translateX(0)
+              }
+              100% {
+                transform: translateX(-50%)
+              }
+        }
+      }
+
+      .Homepage_imgContainer-botImg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        animation: 3s ease-in-out infinite alternate botAnimate;
+      }
+      @keyframes botAnimate {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        100% {
+          transform: scale(1.1) rotate(-5deg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use '../abstracts/mixins';
+
+.signUpContainer{
+    @include mixins.flex-container(row, center, center);
+    height: 100%;
+}
