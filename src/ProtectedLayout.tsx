@@ -15,9 +15,15 @@ function ProtectedLayout() {
     },[userId, isLoaded, navigate])
     
   return (
-    <div>
+    <div className="Layout_Container">
+      <div className="Layout_Container-sidemenu">
       <SideMenu/>
+      </div>
+      <div className="Layout_Container-outlet">
       <Outlet />
+      </div>
+      
+      
     </div>
   );
 }

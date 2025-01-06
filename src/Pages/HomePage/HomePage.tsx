@@ -22,6 +22,13 @@ function HomePage() {
           <img src="/media/bot.png" alt="" className="Homepage_imgContainer-botImg" />
         </div>
       </div>
+      <div className="HomePage_Terms">
+        <img src="/media/logo.png" alt="" />
+        <div className="HomePage_Links">
+          <Link to={'/'}>Terms of service</Link>
+          <Link to={'/'}>Privacy Policy</Link>
+        </div>
+      </div>
     </div>
   );
 }

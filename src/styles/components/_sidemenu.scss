@@ -1,0 +1,46 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+
+.ChatList_container{
+    @include mixins.flex-container(column);
+    height: 100%;
+    padding: 0px 24px 0px 0px;
+    margin-top: 36px;
+    hr{
+        border: none;
+        height: 2px;
+        background: variables.$hrColor;
+        opacity: 0.1;   
+        border-radius: 5px;
+        margin: 20px 0px;
+    }
+    a{
+        padding: 8px 16px;
+        border-radius: 10px;
+        &:hover{
+            background-color: #2c2937;
+        }
+    }
+    .ChatList_container-title{
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 16px
+    }
+    .ChatList_container-titleList{
+        @include mixins.flex-container(column,null,null, 8px );
+       
+    }
+
+    .ChatList_container-chatList{
+        max-height: 380px;
+        @include mixins.flex-container(column);
+        overflow-y: scroll;
+
+       
+    }
+    .ChatList_container-chatList::-webkit-scrollbar{
+        display: none;
+    }
+}
