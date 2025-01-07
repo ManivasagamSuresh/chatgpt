@@ -13,14 +13,10 @@ function SideMenu() {
         <hr />
         <div className='ChatList_container-title'>Recent Chat</div>
         <div className='ChatList_container-chatList'>
-        <Link to='/'>Chat</Link>
-        <Link to='/'>Chat</Link>
-        <Link to='/'>Chat</Link>
-        <Link to='/'>Chat</Link>
-        <Link to='/'>Chat</Link>
-        <Link to='/'>Chat</Link>
-        <Link to='/'>Chat</Link>
-        <Link to='/'>Chat</Link>
+        <Link to='/dashboard/chat/1'>Chat</Link>
+        <Link to='/dashboard/chat/1'>Chat</Link>
+        <Link to='/dashboard/chat/1'>Chat</Link>
+        <Link to='/dashboard/chat/1'>Chat</Link>
         </div>
         <hr />  
     </div>
