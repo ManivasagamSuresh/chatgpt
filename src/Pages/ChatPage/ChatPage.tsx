@@ -33,8 +33,7 @@ function ChatPage() {
           <div className="ChatPage_message ChatPage_message-user">Test Message from user</div>
           <div className="ChatPage_message">Test Message from AI</div>
           <div className="ChatPage_message ChatPage_message-user">Test Message from user</div>
-          <NewPromptForm />
-          
+          <NewPromptForm /> 
         </div>
       </div>
     </div>
